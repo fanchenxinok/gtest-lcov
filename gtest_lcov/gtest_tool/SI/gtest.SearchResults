@@ -1,0 +1,4 @@
+---- InitGoogleTestImpl Matches (3 in 1 files) ----
+Gtest.cc (z:\test\messagesend\sendmessagemodel8\gtest_lcov\gtest_tool\src):void InitGoogleTestImpl(int* argc, CharType** argv) {
+Gtest.cc (z:\test\messagesend\sendmessagemodel8\gtest_lcov\gtest_tool\src):  internal::InitGoogleTestImpl(argc, argv);
+Gtest.cc (z:\test\messagesend\sendmessagemodel8\gtest_lcov\gtest_tool\src):  internal::InitGoogleTestImpl(argc, argv);
