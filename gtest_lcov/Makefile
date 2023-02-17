@@ -27,6 +27,7 @@ CPPFLAGS += -isystem $(GTEST_DIR)/include
 
 # Flags passed to the C++ compiler.
 CXXFLAGS += -g -Wall -Wextra -pthread 
+#需要用lcov查看哪个文件的代码覆盖率，编译的时候就加上-fprofile-arcs -ftest-coverage编译选项
 CXXFLAGS2 += -g -Wall -Wextra -pthread -fprofile-arcs -ftest-coverage
 # All tests produced by this Makefile.  Remember to add new tests you
 # created to the list.
@@ -86,7 +87,7 @@ TEST_CASE_O = ./test_case.o
 	$(XX) -c $(CPPFLAGS) $< -o $@ $(INCLUDE_DIRS)
 	
 $(CC_OBJECTS) : %.o : %.c
-	$(CC) -c $(CXXFLAGS2) $< -o $@ $(INCLUDE_DIRS)  #需要用lcov查看哪个文件的代码覆盖率，编译的时候就加上-fprofile-arcs -ftest-coverage编译选项
+	$(CC) -c $(CXXFLAGS2) $< -o $@ $(INCLUDE_DIRS)
 
 $(XX_OBJECTS) : %.o : %.cpp
 	$(XX) -c $(CXXFLAGS2) $< -o $@ $(INCLUDE_DIRS)
